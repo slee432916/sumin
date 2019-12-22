@@ -1,0 +1,37 @@
+// Example program
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main(int argc,char *argv[])
+{
+    int n,x;
+    int t = 0;
+    int sum = 0;
+    vector<int> v;
+    
+    //input
+    cin >> n;
+    for(int i =0; i<n; ++i)
+        {
+            cin >> x;
+            v.push_back(x);
+        }
+        
+    //sort for faste person first to use
+    sort(v.begin(), v.end());
+    
+    // sum = total time to take
+    for(int i= 0; i < n; ++i)
+    {
+        t += v[i];
+        sum += t;
+    }
+    
+    cout << sum << endl;
+    
+    return 0;
+}
